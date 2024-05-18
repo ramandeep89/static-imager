@@ -106,7 +106,7 @@ public class LandscapeGraphics {
     }
 
     private java.util.List<Double> generateBatchPoints(double steepness) {
-        List<Double> points = Arrays.asList(new Double[]{0D, 0D});
+        List<Double> points = Arrays.asList(0D, 0D);
 
         for(var i = 0; i < iterations; i++){
             points = generatePoints(points, steepness);
@@ -117,8 +117,8 @@ public class LandscapeGraphics {
     public void generateLandscape() {
         fill(colors[0]);
         drawPoints(generateBatchPoints(10 + steepnessOffset), colors[1], -200);
-        drawPoints(generateBatchPoints(07 + steepnessOffset), colors[2], 0);
-        drawPoints(generateBatchPoints(05 + steepnessOffset), colors[3], 100);
-        drawPoints(generateBatchPoints(06 + steepnessOffset), colors[4], 200);
+        drawPoints(generateBatchPoints(7 + steepnessOffset), colors[2], 0);
+        drawPoints(generateBatchPoints(5 + steepnessOffset), colors[3], 100);
+        drawPoints(generateBatchPoints(6 + steepnessOffset), colors[4], 200);
     }
 }
