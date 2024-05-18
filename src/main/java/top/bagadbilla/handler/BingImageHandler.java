@@ -13,6 +13,6 @@ public class BingImageHandler {
                 + new Gson().fromJson(
                         APIClient.getResponse(URL + "/HPImageArchive.aspx?format=js&idx=0&n=1"),
                         BingImageResponse.class)
-                        .images().get(0).url();
+                        .images().getFirst().url();
     }
 }
