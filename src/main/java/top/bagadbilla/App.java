@@ -4,6 +4,7 @@ import io.javalin.Javalin;
 import io.javalin.http.Context;
 import picocli.CommandLine;
 import top.bagadbilla.handler.BingImageHandler;
+import top.bagadbilla.handler.LandscapeGeneratorHandler;
 import top.bagadbilla.handler.NasaApodHandler;
 
 @CommandLine.Command(name = "static-imager", version = "static-imager 1.0", mixinStandardHelpOptions = true)
@@ -21,6 +22,16 @@ public class App implements Runnable {
                 .get("/bing", ctx -> ctx.redirect(
                         BingImageHandler.getResponse()
                 ))
+                .get("/landscape", ctx -> {
+                    int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1920);
+                    int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
+                    float hue = ctx.queryParamAsClass("hue", Float.class)
+                            .check(aFloat -> aFloat > 0F && aFloat < 360F, "Hue out of bounds (0, 360)")
+                            .getOrDefault(-1F);
+                    ctx.contentType("image/png");
+                    ctx.result(LandscapeGeneratorHandler.getResponse(width, height, hue));
+                    ctx.status(200);
+                })
                 .head("/", Context::status)
                 .start(7070);
     }
