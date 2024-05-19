@@ -28,8 +28,9 @@ public class App implements Runnable {
                     float hue = ctx.queryParamAsClass("hue", Float.class)
                             .check(aFloat -> aFloat > 0F && aFloat < 360F, "Hue out of bounds (0, 360)")
                             .getOrDefault(-1F);
+                    boolean defaultColors = ctx.queryParamAsClass("default", Boolean.class).getOrDefault(false);
                     ctx.contentType("image/png");
-                    ctx.result(LandscapeGeneratorHandler.getResponse(width, height, hue));
+                    ctx.result(LandscapeGeneratorHandler.getResponse(width, height, hue, defaultColors));
                     ctx.status(200);
                 })
                 .head("/", Context::status)
