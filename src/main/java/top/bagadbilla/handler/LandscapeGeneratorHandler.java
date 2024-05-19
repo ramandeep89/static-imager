@@ -9,13 +9,12 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 public class LandscapeGeneratorHandler {
-    public static byte[] getResponse(int width, int height, float hue, boolean defaultColors) throws IOException {
+    public static byte[] getResponse(int width, int height, float hue) throws IOException {
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = image.createGraphics();
         LandscapeGraphics graphics = new LandscapeGraphics(g, width, height);
-        if(!defaultColors)
-            if (hue < 0.0f) graphics.newColorScheme();
-            else graphics.newColorScheme(hue);
+        if (hue < 0F) graphics.newColorScheme();
+        else if (hue > 0F) graphics.newColorScheme(hue);
         graphics.generateLandscape();
         graphics.smoothen();
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
