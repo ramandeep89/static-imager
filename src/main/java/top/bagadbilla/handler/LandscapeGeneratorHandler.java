@@ -17,8 +17,13 @@ public class LandscapeGeneratorHandler {
         else if (hue > 0F) graphics.newColorScheme(hue);
         graphics.generateLandscape();
         graphics.smoothen();
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        ImageIO.write(image, "png", stream);
-        return stream.toByteArray();
+        byte[] imageBytes;
+        boolean writeSuccess;
+        try (ByteArrayOutputStream stream = new ByteArrayOutputStream()) {
+            writeSuccess = ImageIO.write(image, "png", stream);
+            imageBytes = stream.toByteArray();
+        }
+        if (writeSuccess) return imageBytes;
+        else throw new IOException("Unable to write image");
     }
 }
