@@ -6,6 +6,7 @@ import picocli.CommandLine;
 import top.bagadbilla.handler.BingImageHandler;
 import top.bagadbilla.handler.LandscapeGeneratorHandler;
 import top.bagadbilla.handler.NasaApodHandler;
+import top.bagadbilla.handler.javafx.RainbowRectangleGeneratorHandler;
 
 @CommandLine.Command(name = "static-imager", version = "static-imager 1.0", mixinStandardHelpOptions = true)
 public class App implements Runnable {
@@ -30,6 +31,13 @@ public class App implements Runnable {
                             .getOrDefault(0F);
                     ctx.contentType("image/png");
                     ctx.result(LandscapeGeneratorHandler.getResponse(width, height, hue));
+                    ctx.status(200);
+                })
+                .get("/rainbowrectangle", ctx -> {
+                    int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1920);
+                    int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
+                    ctx.contentType("image/png");
+                    ctx.result(RainbowRectangleGeneratorHandler.getResponse(width, height));
                     ctx.status(200);
                 })
                 .head("/", Context::status)

@@ -1,11 +1,10 @@
 package top.bagadbilla.handler;
 
 import top.bagadbilla.model.landscape.LandscapeGraphics;
+import top.bagadbilla.util.ImageByteConverter;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 public class LandscapeGeneratorHandler {
@@ -17,13 +16,6 @@ public class LandscapeGeneratorHandler {
         else if (hue > 0F) graphics.newColorScheme(hue);
         graphics.generateLandscape();
         graphics.smoothen();
-        byte[] imageBytes;
-        boolean writeSuccess;
-        try (ByteArrayOutputStream stream = new ByteArrayOutputStream()) {
-            writeSuccess = ImageIO.write(image, "png", stream);
-            imageBytes = stream.toByteArray();
-        }
-        if (writeSuccess) return imageBytes;
-        else throw new IOException("Unable to write image");
+        return ImageByteConverter.toByteArray(image);
     }
 }
