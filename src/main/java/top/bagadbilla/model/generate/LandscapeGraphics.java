@@ -1,4 +1,4 @@
-package top.bagadbilla.model.landscape;
+package top.bagadbilla.model.generate;
 
 import java.awt.*;
 import java.awt.geom.GeneralPath;
@@ -7,11 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class LandscapeGraphics {
+public class LandscapeGraphics extends BaseGraphics {
 
-    private final int height;
-    private final int width;
-    private final Graphics2D g;
     // default initial colors
     private Color[] colors = new Color[]{
             new Color(0xAFFFFF),
@@ -25,26 +22,11 @@ public class LandscapeGraphics {
     private final int steepnessOffset = 0;
 
     public LandscapeGraphics(Graphics2D g) {
-        this.g = g;
-        height = 1080;
-        width = 1920;
+        super(g);
     }
 
     public LandscapeGraphics(Graphics2D g, int width, int height) {
-        this.g = g;
-        this.height = height;
-        this.width = width;
-    }
-
-    public void smoothen() {
-        g.setRenderingHint(RenderingHints.KEY_ALPHA_INTERPOLATION, RenderingHints.VALUE_ALPHA_INTERPOLATION_QUALITY);
-        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g.setRenderingHint(RenderingHints.KEY_COLOR_RENDERING, RenderingHints.VALUE_COLOR_RENDER_QUALITY);
-        g.setRenderingHint(RenderingHints.KEY_DITHERING, RenderingHints.VALUE_DITHER_ENABLE);
-        g.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS, RenderingHints.VALUE_FRACTIONALMETRICS_ON);
-        g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-        g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
-        g.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);
+        super(g, width, height);
     }
 
     public void newColorScheme() {
@@ -74,11 +56,6 @@ public class LandscapeGraphics {
         path.lineTo(0, height);
         path.closePath();
         g.fill(path);
-    }
-
-    private void fill(Color color) {
-        g.setColor(color);
-        g.fillRect(0, 0, width, height);
     }
 
     private List<Double> generatePoints(java.util.List<Double> points, double steepness) {
@@ -114,7 +91,8 @@ public class LandscapeGraphics {
         return points;
     }
 
-    public void generateLandscape() {
+    @Override
+    public void generate() {
         fill(colors[0]);
         drawPoints(generateBatchPoints(10 + steepnessOffset), colors[1], -200);
         drawPoints(generateBatchPoints(7 + steepnessOffset), colors[2], 0);

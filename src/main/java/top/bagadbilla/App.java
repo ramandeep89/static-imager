@@ -6,7 +6,7 @@ import picocli.CommandLine;
 import top.bagadbilla.handler.BingImageHandler;
 import top.bagadbilla.handler.LandscapeGeneratorHandler;
 import top.bagadbilla.handler.NasaApodHandler;
-import top.bagadbilla.handler.javafx.RainbowRectangleGeneratorHandler;
+import top.bagadbilla.handler.RainbowRectangleGeneratorHandler;
 
 @CommandLine.Command(name = "static-imager", version = "static-imager 1.0", mixinStandardHelpOptions = true)
 public class App implements Runnable {

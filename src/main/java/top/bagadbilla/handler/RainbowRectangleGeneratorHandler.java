@@ -1,19 +1,22 @@
 package top.bagadbilla.handler;
 
-import top.bagadbilla.model.generate.LandscapeGraphics;
+import top.bagadbilla.model.generate.RainbowRectanglesGraphics;
 import top.bagadbilla.util.ImageByteConverter;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class LandscapeGeneratorHandler {
-    public static byte[] getResponse(int width, int height, float hue) throws IOException {
+/*
+Based on https://codepen.io/DonKarlssonSan/pen/BaNeEyp
+ */
+
+public class RainbowRectangleGeneratorHandler {
+
+    public static byte[] getResponse(int width, int height) throws IOException {
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = image.createGraphics();
-        LandscapeGraphics graphics = new LandscapeGraphics(g, width, height);
-        if (hue < 0F) graphics.newColorScheme();
-        else if (hue > 0F) graphics.newColorScheme(hue);
+        RainbowRectanglesGraphics graphics = new RainbowRectanglesGraphics(g, width, height);
         graphics.generate();
         graphics.smoothen();
         return ImageByteConverter.toByteArray(image);

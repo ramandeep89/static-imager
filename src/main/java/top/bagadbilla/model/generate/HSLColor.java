@@ -1,4 +1,4 @@
-package top.bagadbilla.model.landscape;
+package top.bagadbilla.model.generate;
 
 import java.awt.*;
 
