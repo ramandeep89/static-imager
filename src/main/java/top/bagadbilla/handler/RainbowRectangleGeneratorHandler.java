@@ -1,6 +1,6 @@
 package top.bagadbilla.handler;
 
-import top.bagadbilla.model.generate.RainbowRectanglesGraphics;
+import top.bagadbilla.model.graphics.RainbowRectanglesGraphics;
 import top.bagadbilla.util.ImageByteConverter;
 
 import java.awt.*;

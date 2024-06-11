@@ -1,4 +1,4 @@
-package top.bagadbilla.model.generate;
+package top.bagadbilla.model.graphics;
 
 import java.awt.*;
 import java.awt.geom.GeneralPath;
@@ -20,10 +20,6 @@ public class LandscapeGraphics extends BaseGraphics {
     //iterations of the algorithm, warning: the number of points increases exponentially with the iteration count
     private final int iterations = 10;
     private final int steepnessOffset = 0;
-
-    public LandscapeGraphics(Graphics2D g) {
-        super(g);
-    }
 
     public LandscapeGraphics(Graphics2D g, int width, int height) {
         super(g, width, height);

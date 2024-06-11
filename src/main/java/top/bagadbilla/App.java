@@ -31,14 +31,12 @@ public class App implements Runnable {
                             .getOrDefault(0F);
                     ctx.contentType("image/png");
                     ctx.result(LandscapeGeneratorHandler.getResponse(width, height, hue));
-                    ctx.status(200);
                 })
-                .get("/rainbowrectangle", ctx -> {
+                .get("/rectangles", ctx -> {
                     int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1920);
                     int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
                     ctx.contentType("image/png");
                     ctx.result(RainbowRectangleGeneratorHandler.getResponse(width, height));
-                    ctx.status(200);
                 })
                 .head("/", Context::status)
                 .start(7070);

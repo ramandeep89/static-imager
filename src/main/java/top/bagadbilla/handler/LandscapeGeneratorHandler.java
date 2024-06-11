@@ -1,6 +1,6 @@
 package top.bagadbilla.handler;
 
-import top.bagadbilla.model.generate.LandscapeGraphics;
+import top.bagadbilla.model.graphics.LandscapeGraphics;
 import top.bagadbilla.util.ImageByteConverter;
 
 import java.awt.*;

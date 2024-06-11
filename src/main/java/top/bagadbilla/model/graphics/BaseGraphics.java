@@ -1,4 +1,4 @@
-package top.bagadbilla.model.generate;
+package top.bagadbilla.model.graphics;
 
 import java.awt.*;
 
@@ -8,16 +8,10 @@ public abstract class BaseGraphics {
     protected final int width;
     protected final int height;
 
-    protected BaseGraphics(Graphics2D g, int width, int height) {
+    public BaseGraphics(Graphics2D g, int width, int height) {
         this.g = g;
         this.width = width;
         this.height = height;
-    }
-
-    protected BaseGraphics(Graphics2D g) {
-        this.g = g;
-        this.width = 1920;
-        this.height = 1080;
     }
 
     protected void fill(Color color) {

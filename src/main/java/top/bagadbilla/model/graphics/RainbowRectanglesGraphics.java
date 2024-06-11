@@ -1,4 +1,4 @@
-package top.bagadbilla.model.generate;
+package top.bagadbilla.model.graphics;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -8,10 +8,6 @@ public class RainbowRectanglesGraphics extends BaseGraphics {
 
     public RainbowRectanglesGraphics(Graphics2D g, int width, int height) {
         super(g, width, height);
-    }
-
-    public RainbowRectanglesGraphics(Graphics2D g) {
-        super(g);
     }
 
     public void generate() {
