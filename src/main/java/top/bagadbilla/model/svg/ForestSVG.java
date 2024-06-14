@@ -3,7 +3,6 @@ package top.bagadbilla.model.svg;
 import org.apache.batik.anim.dom.SVGDOMImplementation;
 import org.w3c.dom.*;
 
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
