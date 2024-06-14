@@ -3,10 +3,8 @@ package top.bagadbilla;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import picocli.CommandLine;
-import top.bagadbilla.handler.BingImageHandler;
-import top.bagadbilla.handler.LandscapeGeneratorHandler;
-import top.bagadbilla.handler.NasaApodHandler;
-import top.bagadbilla.handler.RainbowRectangleGeneratorHandler;
+import top.bagadbilla.handler.*;
+import top.bagadbilla.model.svg.ForestSVG;
 
 @CommandLine.Command(name = "static-imager", version = "static-imager 1.0", mixinStandardHelpOptions = true)
 public class App implements Runnable {
@@ -37,6 +35,10 @@ public class App implements Runnable {
                     int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
                     ctx.contentType("image/png");
                     ctx.result(RainbowRectangleGeneratorHandler.getResponse(width, height));
+                })
+                .get("/forest", ctx -> {
+                    ctx.contentType("image/svg+xml");
+                    ctx.result(ForestGeneratorHandler.getResponse());
                 })
                 .head("/", Context::status)
                 .start(7070);
