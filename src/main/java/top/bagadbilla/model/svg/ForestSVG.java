@@ -32,7 +32,7 @@ public class ForestSVG extends BaseSVG {
     private final String[] palette;
     private final Document document;
 
-    public ForestSVG() throws ParserConfigurationException {
+    public ForestSVG() {
         palette = PALETTES[(int) Math.floor(Math.random() * PALETTES.length)];
         DOMImplementation impl = SVGDOMImplementation.getDOMImplementation();
         document = impl.createDocument(SVGDOMImplementation.SVG_NAMESPACE_URI, "svg", null);
