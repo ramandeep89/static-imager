@@ -36,12 +36,14 @@ public class ForestSVG extends BaseSVG {
         DOMImplementation impl = SVGDOMImplementation.getDOMImplementation();
         document = impl.createDocument(SVGDOMImplementation.SVG_NAMESPACE_URI, "svg", null);
         Element style = document.createElement("style");
-        Text svgClass = document.createTextNode(".svg-main{width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;} ");
-        style.appendChild(svgClass);
+//        Text svgClass = document.createTextNode(".svg-main{width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;} ");
+//        style.appendChild(svgClass);
         Text elementClass = document.createTextNode(".tr-origin-bottom{transform-origin: 0% 100%;} ");
         style.appendChild(elementClass);
         document.getDocumentElement().setAttribute("class", "svg-main");
         document.getDocumentElement().setAttribute("viewBox", "0 0 1280 640");
+        document.getDocumentElement().setAttribute("width", "1280");
+        document.getDocumentElement().setAttribute("height", "640");
         document.getDocumentElement().setAttribute("fill", "none");
         document.getDocumentElement().appendChild(style);
     }
@@ -212,7 +214,6 @@ public class ForestSVG extends BaseSVG {
         root.appendChild(createGrass(palette[0]));
 
         root.appendChild(createDefs());
-        System.out.println(toString(document));
         return toString(document);
     }
 }
