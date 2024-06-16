@@ -36,8 +36,10 @@ public class App implements Runnable {
                     ctx.result(RainbowRectangleGeneratorHandler.getResponse(width, height));
                 })
                 .get("/forest", ctx -> {
+                	int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1280);
+                    int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(640);
                     ctx.contentType("image/svg+xml");
-                    ctx.result(ForestGeneratorHandler.getResponse());
+                    ctx.result(ForestGeneratorHandler.getResponse(width, height));
                 })
                 .get("/svgfile", ctx -> {
                 	String svg = ctx.queryParam("svg");
