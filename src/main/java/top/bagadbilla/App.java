@@ -4,7 +4,6 @@ import io.javalin.Javalin;
 import io.javalin.http.Context;
 import picocli.CommandLine;
 import top.bagadbilla.handler.*;
-import top.bagadbilla.model.svg.ForestSVG;
 
 @CommandLine.Command(name = "static-imager", version = "static-imager 1.0", mixinStandardHelpOptions = true)
 public class App implements Runnable {
@@ -39,6 +38,10 @@ public class App implements Runnable {
                 .get("/forest", ctx -> {
                     ctx.contentType("image/svg+xml");
                     ctx.result(ForestGeneratorHandler.getResponse());
+                })
+                .get("/seasky", ctx -> {
+                	ctx.contentType("image/svg+xml");
+                	ctx.result(SeaAndSkySVGHandler.getResponse());
                 })
                 .head("/", Context::status)
                 .start(7070);
