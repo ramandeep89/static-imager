@@ -1,0 +1,445 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" class="rSVG">
+	<linearGradient id="grad" gradientTransform="rotate(90)">
+		<stop offset="0%" stop-color="#E0273D"></stop>
+		<stop offset="100%" stop-color="#68249D"></stop>
+	</linearGradient>
+	<pattern id="grid" width="286" height="100" patternUnits="userSpaceOnUse" paatterntransform="scale(0.6) skewX(4.1) skewY(-4)">
+		<g fill="rgb(215,95,175)">
+			<circle cx="0"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-0ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-0ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="2"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-7600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-760ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="4"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-15200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-1520ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="6"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-22800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-2280ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="8"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-1800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-3040ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="10"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-9400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-3800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="12"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-17000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-4560ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="14"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-24600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-5320ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="16"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-3600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-6080ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="18"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-11200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-6840ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="20"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-18800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-7600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="22"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-26400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-8360ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="24"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-5400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-9120ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="26"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-13000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-9880ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="28"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-20600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-10640ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="30"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-28200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-11400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="32"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-7200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-12160ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="34"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-14800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-12920ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="36"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-22400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-13680ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="38"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-1400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-14440ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="40"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-9000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-15200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="42"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-16600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-15960ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="44"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-24200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-16720ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="46"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-3200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-17480ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="48"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-10800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-18240ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="50"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-18400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-19000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="52"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-26000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-19760ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="54"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-5000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-20520ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="56"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-12600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-21280ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="58"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-20200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-22040ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="60"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-27800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-22800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="62"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-6800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-23560ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="64"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-14400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-24320ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="66"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-22000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-25080ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="68"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-1000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-25840ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="70"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-8600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-26600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="72"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-16200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-27360ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="74"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-23800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-28120ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="76"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-2800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-280ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="78"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-10400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-1040ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="80"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-18000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-1800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="82"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-25600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-2560ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="84"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-4600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-3320ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="86"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-12200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-4080ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="88"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-19800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-4840ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="90"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-27400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-5600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="92"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-6400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-6360ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="94"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-14000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-7120ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="96"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-21600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-7880ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="98"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-8640ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="100"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-8200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-9400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="102"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-15800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-10160ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="104"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-23400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-10920ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="106"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-2400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-11680ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="108"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-10000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-12440ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="110"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-17600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-13200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="112"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-25200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-13960ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="114"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-4200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-14720ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="116"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-11800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-15480ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="118"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-19400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-16240ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="120"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-27000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-17000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="122"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-6000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-17760ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="124"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-13600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-18520ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="126"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-21200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-19280ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="128"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-20040ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="130"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-7800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-20800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="132"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-15400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-21560ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="134"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-23000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-22320ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="136"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-2000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-23080ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="138"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-9600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-23840ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="140"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-17200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-24600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="142"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-24800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-25360ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="144"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-3800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-26120ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="146"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-11400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-26880ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="148"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-19000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-27640ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="150"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-26600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-28400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="152"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-5600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-560ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="154"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-13200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-1320ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="156"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-20800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-2080ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="158"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-28400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-2840ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="160"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-7400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-3600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="162"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-15000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-4360ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="164"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-22600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-5120ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="166"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-1600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-5880ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="168"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-9200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-6640ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="170"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-16800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-7400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="172"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-24400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-8160ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="174"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-3400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-8920ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="176"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-11000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-9680ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="178"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-18600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-10440ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="180"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-26200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-11200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="182"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-5200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-11960ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="184"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-12800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-12720ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="186"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-20400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-13480ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="188"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-28000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-14240ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="190"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-7000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-15000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="192"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-14600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-15760ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="194"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-22200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-16520ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="196"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-1200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-17280ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="198"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-8800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-18040ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="200"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-16400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-18800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="202"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-24000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-19560ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="204"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-3000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-20320ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="206"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-10600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-21080ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="208"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-18200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-21840ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="210"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-25800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-22600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="212"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-4800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-23360ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="214"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-12400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-24120ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="216"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-20000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-24880ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="218"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-27600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-25640ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="220"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-6600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-26400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="222"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-14200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-27160ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="224"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-21800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-27920ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="226"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-80ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="228"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-8400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-840ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="230"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-16000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-1600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="232"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-23600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-2360ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="234"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-2600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-3120ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="236"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-10200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-3880ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="238"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-17800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-4640ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="240"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-25400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-5400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="242"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-4400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-6160ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="244"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-12000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-6920ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="246"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-19600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-7680ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="248"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-27200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-8440ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="250"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-6200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-9200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="252"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-13800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-9960ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="254"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-21400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-10720ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="256"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-11480ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="258"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-8000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-12240ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="260"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-15600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-13000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="262"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-23200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-13760ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="264"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-2200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-14520ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="266"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-9800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-15280ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="268"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-17400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-16040ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="270"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-25000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-16800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="272"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-4000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-17560ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="274"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-11600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-18320ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="276"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-19200ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-19080ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="278"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-26800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-19840ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="280"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-5800ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-20600ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="282"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-13400ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-21360ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="284"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-21000ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-22120ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle><circle cx="286"> 
+		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-0ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+		<animate attributeName="r" values="1; 1; 1" dur="14300ms" begin="-22880ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>
+	</circle>
+		</g>
+	</pattern>
+	<rect width="100%" height="100%" fill="url(#grad)"></rect>
+	<rect width="100%" height="100%" fill="url(#grid)"></rect>
+</svg>

@@ -1,14 +1,12 @@
-package top.bagadbilla.model.svg;
+package top.bagadbilla.handler;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-public class SeaAndSkySVG extends BaseSVG {
-
-	@Override
-	public String generate() {
-		try (InputStream inputStream = getClass().getResourceAsStream("/svg/seasky.svg")) {
+public class SVGFileHandler {
+	public static String getResponse(String svgName) {
+		try (InputStream inputStream = SVGFileHandler.class.getResourceAsStream("/svg/" + svgName + ".svg")) {
 			return new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
 		} catch (IOException e) {
 			throw new RuntimeException(e);

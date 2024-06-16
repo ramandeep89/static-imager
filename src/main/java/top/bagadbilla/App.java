@@ -39,9 +39,10 @@ public class App implements Runnable {
                     ctx.contentType("image/svg+xml");
                     ctx.result(ForestGeneratorHandler.getResponse());
                 })
-                .get("/seasky", ctx -> {
+                .get("/svgfile", ctx -> {
+                	String svg = ctx.queryParam("svg");
                 	ctx.contentType("image/svg+xml");
-                	ctx.result(SeaAndSkySVGHandler.getResponse());
+                	ctx.result(SVGFileHandler.getResponse(svg));
                 })
                 .head("/", Context::status)
                 .start(7070);
