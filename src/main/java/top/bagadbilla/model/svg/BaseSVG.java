@@ -25,7 +25,7 @@ public abstract class BaseSVG {
 		this.height = height;
 	}
 
-    protected String svgString() {
+    protected String toSVG() {
         try {
             StringWriter sw = new StringWriter();
             TransformerFactory tf = TransformerFactory.newInstance();

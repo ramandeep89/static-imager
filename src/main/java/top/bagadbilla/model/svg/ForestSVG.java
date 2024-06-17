@@ -211,6 +211,6 @@ public class ForestSVG extends BaseSVG {
 		root.appendChild(createGrass(palette[0]));
 
 		root.appendChild(createDefs());
-		return svgString();
+		return toSVG();
 	}
 }
