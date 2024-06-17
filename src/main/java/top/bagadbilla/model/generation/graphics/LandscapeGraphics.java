@@ -1,4 +1,6 @@
-package top.bagadbilla.model.graphics;
+package top.bagadbilla.model.generation.graphics;
+
+import top.bagadbilla.model.generation.HSLColor;
 
 import java.awt.*;
 import java.awt.geom.GeneralPath;

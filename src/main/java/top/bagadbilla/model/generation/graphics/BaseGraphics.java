@@ -1,17 +1,16 @@
-package top.bagadbilla.model.graphics;
+package top.bagadbilla.model.generation.graphics;
+
+import top.bagadbilla.model.generation.BaseGeneration;
 
 import java.awt.*;
 
-public abstract class BaseGraphics {
+public abstract class BaseGraphics extends BaseGeneration {
 
     protected final Graphics2D g;
-    protected final int width;
-    protected final int height;
 
     public BaseGraphics(Graphics2D g, int width, int height) {
+        super(width, height);
         this.g = g;
-        this.width = width;
-        this.height = height;
     }
 
     protected void fill(Color color) {
@@ -29,6 +28,4 @@ public abstract class BaseGraphics {
         g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
         g.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);
     }
-
-    public abstract void generate();
 }

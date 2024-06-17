@@ -1,4 +1,4 @@
-package top.bagadbilla.model.svg;
+package top.bagadbilla.model.generation.svg;
 
 import java.io.StringWriter;
 
@@ -11,23 +11,25 @@ import javax.xml.transform.stream.StreamResult;
 import org.apache.batik.anim.dom.SVGDOMImplementation;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
+import top.bagadbilla.model.generation.BaseGeneration;
 
-public abstract class BaseSVG {
+public abstract class BaseSVG extends BaseGeneration {
 
     protected final Document document;
-	protected final int width, height;
-    
-    public BaseSVG(int width, int height) {
-		super();
-		DOMImplementation impl = SVGDOMImplementation.getDOMImplementation();
-        this.document = impl.createDocument(SVGDOMImplementation.SVG_NAMESPACE_URI, "svg", null);
-		this.width = width;
-		this.height = height;
-	}
+    protected final int width, height;
+    private final StringWriter sw;
 
-    protected String toSVG() {
+    public BaseSVG(StringWriter sw, int width, int height) {
+        super(width, height);
+        this.sw = sw;
+        DOMImplementation impl = SVGDOMImplementation.getDOMImplementation();
+        this.document = impl.createDocument(SVGDOMImplementation.SVG_NAMESPACE_URI, "svg", null);
+        this.width = width;
+        this.height = height;
+    }
+
+    protected void writeSVG() {
         try {
-            StringWriter sw = new StringWriter();
             TransformerFactory tf = TransformerFactory.newInstance();
             Transformer transformer = tf.newTransformer();
             transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
@@ -36,11 +38,8 @@ public abstract class BaseSVG {
             transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 
             transformer.transform(new DOMSource(document), new StreamResult(sw));
-            return sw.toString();
         } catch (Exception ex) {
             throw new RuntimeException("Error converting to String", ex);
         }
     }
-
-    public abstract String generate();
 }
