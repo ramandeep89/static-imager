@@ -94,9 +94,9 @@ public class ForestSVG extends BaseSVG {
 	}
 
 	private Element createPath(String[] paths, int i) {
-		Element birdPath = document.createElement("path");
-		birdPath.setAttribute("d", paths[i]);
-		return birdPath;
+		Element path = document.createElement("path");
+		path.setAttribute("d", paths[i]);
+		return path;
 	}
 
 	private Element createRandomBird(float scale, String fill) {
