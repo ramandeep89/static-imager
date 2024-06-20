@@ -3,14 +3,15 @@ package top.bagadbilla.model.generation.graphics;
 import top.bagadbilla.model.generation.BaseGeneration;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public abstract class BaseGraphics extends BaseGeneration {
 
     protected final Graphics2D g;
 
-    public BaseGraphics(Graphics2D g, int width, int height) {
+    public BaseGraphics(BufferedImage image, int width, int height) {
         super(width, height);
-        this.g = g;
+        this.g = image.createGraphics();
     }
 
     protected void fill(Color color) {
