@@ -3,7 +3,7 @@
 		<stop offset="0%" stop-color="#E0273D"></stop>
 		<stop offset="100%" stop-color="#68249D"></stop>
 	</linearGradient>
-	<pattern id="grid" width="286" height="100" patternUnits="userSpaceOnUse" paatterntransform="scale(0.6) skewX(4.1) skewY(-4)">
+	<pattern id="grid" width="286" height="100" patternUnits="userSpaceOnUse">
 		<g fill="rgb(215,95,175)">
 			<circle cx="0"> 
 		<animate attributeName="cy" values="4; 96; 4" dur="28600ms" begin="-0ms" repeatCount="indefinite" keyTimes="0;0.54;1" keySplines="0.24 0.89 0.71 0.06; 0.06 0.71 0.89 0.24" calcMode="spline"></animate>

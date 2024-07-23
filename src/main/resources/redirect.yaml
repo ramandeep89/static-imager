@@ -1,10 +1,10 @@
 # List of weighted redirects in the format: redirect-uri: weight
-/nasa: 1
-/bing: 1
-/landscape?random=true: 2
-/rectangles: 2
-/forest: 5
-/svgfile?svg=cowabunga: 1
-/svgfile?svg=mist: 1
-/svgfile?svg=mountains: 1
-/svgfile?svg=seasky: 1
+#/nasa: 1
+#/bing: 1
+/landscape?random=true: 1
+/rectangles: 1
+/forest: 2
+#/svgfile?svg=cowabunga: 1
+#/svgfile?svg=mist: 1
+#/svgfile?svg=mountains: 1
+#/svgfile?svg=seasky: 1
