@@ -7,9 +7,6 @@ module static_imager {
     requires java.desktop;
     requires java.net.http;
     requires java.xml;
-    requires javafx.controls;
-    requires javafx.graphics;
-    requires javafx.swing;
     requires annotations;
     opens top.bagadbilla;
 }

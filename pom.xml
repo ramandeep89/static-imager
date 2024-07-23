@@ -46,16 +46,6 @@
             <artifactId>batik-all</artifactId>
             <version>1.17</version>
         </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>22.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-swing</artifactId>
-            <version>22.0.1</version>
-        </dependency>
     </dependencies>
 
     <build>

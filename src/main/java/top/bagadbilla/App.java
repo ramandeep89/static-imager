@@ -5,8 +5,6 @@ import io.javalin.http.Context;
 import picocli.CommandLine;
 import top.bagadbilla.handler.*;
 
-import java.time.Clock;
-
 @CommandLine.Command(name = "static-imager", version = "static-imager 1.0", mixinStandardHelpOptions = true)
 public class App implements Runnable {
 
@@ -16,10 +14,6 @@ public class App implements Runnable {
     @Override
     public void run() {
         Javalin.create()
-                .events(event -> {
-                    event.serverStarted(FXHandler::startFX);
-                    event.serverStopped(FXHandler::stopFX);
-                })
                 .get("/nasa", ctx -> ctx.redirect(
                         NasaApodHandler.getResponse(nasaApodApiKey)
                 ))
@@ -40,13 +34,6 @@ public class App implements Runnable {
                     int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
                     ctx.contentType("image/png");
                     ctx.result(RainbowRectangleGeneratorHandler.getResponse(width, height));
-                })
-                .get("/flowers", ctx -> {
-                    int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1920);
-                    int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
-                    long seed = ctx.queryParamAsClass("seed", Long.class).getOrDefault(Clock.systemDefaultZone().millis());
-                    ctx.contentType("image/png");
-                    ctx.result(FlowerGeneratorHandler.getResponse(width, height, seed));
                 })
                 .get("/forest", ctx -> {
                 	int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1280);
