@@ -11,6 +11,10 @@ public class App implements Runnable {
     @CommandLine.Option(names = {"-n", "--nasa"}, description = "NASA APOD API Key")
     String nasaApodApiKey = "DEMO_KEY";
 
+    public static void main(String[] args) {
+        new CommandLine(new App()).execute(args);
+    }
+
     @Override
     public void run() {
         Javalin.create()
@@ -38,21 +42,20 @@ public class App implements Runnable {
                     ctx.result(RainbowRectangleGeneratorHandler.getResponse(width, height));
                 })
                 .get("/forest", ctx -> {
-                	int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1280);
+                    int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1280);
                     int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(640);
                     ctx.contentType("image/svg+xml");
                     ctx.result(ForestGeneratorHandler.getResponse(width, height));
                 })
                 .get("/svgfile", ctx -> {
-                	String svg = ctx.queryParam("svg");
-                	ctx.contentType("image/svg+xml");
-                	ctx.result(SVGFileHandler.getResponse(svg));
+                    String svg = ctx.queryParam("svg");
+                    ctx.contentType("image/svg+xml");
+                    ctx.result(SVGFileHandler.getResponse(svg));
                 })
+                .get("/random", ctx -> ctx.redirect(
+                        RandomWeightedRedirectHandler.getResponse()
+                ))
                 .head("/", Context::status)
                 .start(7070);
-    }
-
-    public static void main(String[] args) {
-        new CommandLine(new App()).execute(args);
     }
 }
