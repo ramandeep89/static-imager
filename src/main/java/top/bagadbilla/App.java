@@ -27,8 +27,7 @@ public class App implements Runnable {
                             .check(aFloat -> aFloat >= 0F && aFloat < 360F, "Hue out of bounds (0, 360)")
                             .getOrDefault(-1F);
                     boolean random = ctx.queryParamAsClass("random", Boolean.class).getOrDefault(false);
-                    boolean defaultHue = ctx.queryParamAsClass("defaultHue", Boolean.class).getOrDefault(true);
-                    if (hue != -1F) defaultHue = false;
+                    boolean defaultHue = hue == -1F;
                     ctx.contentType("image/png");
                     ctx.result(LandscapeGeneratorHandler.getResponse(width, height, hue, random, defaultHue));
                 })
