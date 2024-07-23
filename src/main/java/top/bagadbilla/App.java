@@ -24,10 +24,13 @@ public class App implements Runnable {
                     int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1920);
                     int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
                     float hue = ctx.queryParamAsClass("hue", Float.class)
-                            .check(aFloat -> aFloat >= -1F && aFloat < 360F, "Hue out of bounds (0, 360)")
-                            .getOrDefault(0F);
+                            .check(aFloat -> aFloat >= 0F && aFloat < 360F, "Hue out of bounds (0, 360)")
+                            .getOrDefault(-1F);
+                    boolean random = ctx.queryParamAsClass("random", Boolean.class).getOrDefault(false);
+                    boolean defaultHue = ctx.queryParamAsClass("defaultHue", Boolean.class).getOrDefault(true);
+                    if (hue != -1F) defaultHue = false;
                     ctx.contentType("image/png");
-                    ctx.result(LandscapeGeneratorHandler.getResponse(width, height, hue));
+                    ctx.result(LandscapeGeneratorHandler.getResponse(width, height, hue, random, defaultHue));
                 })
                 .get("/rectangles", ctx -> {
                     int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1920);
