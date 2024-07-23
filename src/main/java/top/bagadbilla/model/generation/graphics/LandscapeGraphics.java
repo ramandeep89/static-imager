@@ -20,9 +20,6 @@ public class LandscapeGraphics extends BaseGraphics {
             new Color(0x264E86),
             new Color(0x081d38),
     };
-    //iterations of the algorithm, warning: the number of points increases exponentially with the iteration count
-    private final int iterations = 10;
-    private final int steepnessOffset = 0;
 
     public LandscapeGraphics(BufferedImage image, int width, int height) {
         super(image, width, height);
@@ -84,6 +81,8 @@ public class LandscapeGraphics extends BaseGraphics {
     private java.util.List<Double> generateBatchPoints(double steepness) {
         List<Double> points = Arrays.asList(0D, 0D);
 
+        //iterations of the algorithm, warning: the number of points increases exponentially with the iteration count
+        int iterations = 10;
         for(var i = 0; i < iterations; i++){
             points = generatePoints(points, steepness);
         }
@@ -93,6 +92,7 @@ public class LandscapeGraphics extends BaseGraphics {
     @Override
     public void generate() {
         fill(colors[0]);
+        int steepnessOffset = 0;
         drawPoints(generateBatchPoints(10 + steepnessOffset), colors[1], -200);
         drawPoints(generateBatchPoints(7 + steepnessOffset), colors[2], 0);
         drawPoints(generateBatchPoints(5 + steepnessOffset), colors[3], 100);
