@@ -2,6 +2,7 @@ package top.bagadbilla;
 
 import io.javalin.Javalin;
 import io.javalin.http.Context;
+import javafx.application.Platform;
 import picocli.CommandLine;
 import top.bagadbilla.handler.*;
 
@@ -17,6 +18,8 @@ public class App implements Runnable {
 
     @Override
     public void run() {
+        Platform.startup(() -> {
+        });
         Javalin.create()
                 .get("/nasa", ctx -> ctx.redirect(
                         NasaApodHandler.getResponse(nasaApodApiKey)
@@ -40,6 +43,12 @@ public class App implements Runnable {
                     int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
                     ctx.contentType("image/png");
                     ctx.result(RainbowRectangleGeneratorHandler.getResponse(width, height));
+                })
+                .get("/flowers", ctx -> {
+                    int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1920);
+                    int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
+                    ctx.contentType("image/png");
+                    ctx.result(new FlowerGeneratorHandler(width, height).getResponse());
                 })
                 .get("/forest", ctx -> {
                     int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1280);

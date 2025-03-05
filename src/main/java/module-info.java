@@ -4,10 +4,9 @@ module StaticImager {
     requires io.javalin;
     requires java.net.http;
     requires javafx.controls;
-    requires javafx.graphics;
     requires org.yaml.snakeyaml;
     requires com.google.gson;
-    requires java.desktop;
+    requires javafx.swing;
 
     opens top.bagadbilla;
 

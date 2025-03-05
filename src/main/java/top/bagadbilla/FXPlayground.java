@@ -15,7 +15,7 @@ public class FXPlayground extends Application {
     public void start(Stage stage) {
         StackPane root = new StackPane();
         FlowersFX fx = new FlowersFX(800, 600);
-        fx.drawFlowers();
+        fx.draw();
         stage.setTitle(fx.getCanvas().getStyle());
         root.getChildren().add(fx.getCanvas());
         stage.setScene(new Scene(root, 800, 600));

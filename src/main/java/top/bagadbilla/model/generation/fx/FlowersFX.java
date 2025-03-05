@@ -24,8 +24,10 @@ public class FlowersFX extends BaseFX {
                 pick(), chance(), chance(), getRandomInt(1, 4), chance(), 4, getRandomFloat(.5f, .9f), chance(.25f));
     }
 
-    public void drawFlowers() {
+    @Override
+    public FlowersFX draw() {
         ctx.clearRect(0, 0, width, height);
+        ctx.applyEffect(getRandomColorAdjust());
         HSLColor bg;
         if (options.mode.equals("daisies")) bg = getRandomColor(50, 100, 0, 50);
         else bg = getRandomColor(50, 100, 0, 100);
@@ -34,6 +36,12 @@ public class FlowersFX extends BaseFX {
         ctx.fillRect(0, 0, width, height);
         ctx.restore();
 
+        drawFlowers();
+
+        return this;
+    }
+
+    private void drawFlowers() {
         FlowerColor colorOpt = COLORZ.get(options.mode);
         ThemeColors colors = getThemeColors(colorOpt);
         if (options.invertColors) {
@@ -79,7 +87,7 @@ public class FlowersFX extends BaseFX {
         ctx.setGlobalAlpha(f.opacity);
         ctx.setLineWidth(f.lw);
         ctx.translate(f.x, f.y);
-        ctx.rotate(f.rad);
+        ctx.rotate(Math.toDegrees(f.rad));
         ctx.translate(-f.x, -f.y);
 
         ctx.setFill(chance() ? petalC2.getFxColor() : petalC.getFxColor());
@@ -88,7 +96,7 @@ public class FlowersFX extends BaseFX {
         //petals
         for (int i = 0; i < f.petals; i++) {
             ctx.translate(f.x, f.y);
-            ctx.rotate((f.rotate * Math.PI) / 180);
+            ctx.rotate(f.rotate);
             ctx.translate(-f.x, -f.y);
             ctx.beginPath();
             ctx.moveTo(f.x, f.y - f.shiftOut);
@@ -102,9 +110,9 @@ public class FlowersFX extends BaseFX {
                 float endY = f.shiftOut;
                 ctx.translate(f.x, f.y);
                 if (j % 2 == 0) {/*symmetric rotations for more symmetric petals, rando for some irregularity*/
-                    ctx.rotate((j * ((double) 360 / options.petalIterations) * Math.PI) / 180);
+                    ctx.rotate((j * ((double) 360 / options.petalIterations)));
                 } else {
-                    ctx.rotate((j * (getRandomInt(1, 4)) * Math.PI) / 180);
+                    ctx.rotate((j * (getRandomInt(1, 4))));
                 }
 
                 ctx.translate(-f.x, -f.y);
@@ -127,9 +135,11 @@ public class FlowersFX extends BaseFX {
         }
         //pistil
         for (int j = 0; j < 3; j++) {
+//            ctx.fillOval(f.x + getRandomFloat(-2, 2), f.y + getRandomFloat(-2, 2),
+//                    f.r / f.centerDivisor, f.r / f.centerDivisor);
             ctx.arc(f.x + getRandomFloat(-2, 2), f.y + getRandomFloat(-2, 2),
                     f.r / f.centerDivisor, f.r / f.centerDivisor,
-                    0, 2 * Math.PI * (f.r / f.centerDivisor));
+                    0, 360);
         }
 
         ctx.setStroke(petalC.getFxColor());
@@ -222,16 +232,13 @@ public class FlowersFX extends BaseFX {
         if (opt.s2 != 0) dPistilS = opt.s2 + getRandomInt(-opt.vary, opt.vary);
         if (opt.l2 != 0) dPistilL = opt.l2 + getRandomInt(-opt.vary, opt.vary);
 
-        System.out.println(dPetalH + " " + dPetalS + " " + dPetalL);
-        System.out.println(dPistilH + " " + dPistilS + " " + dPistilL);
-
         return new ThemeColors(
                 new HSLColor(dPetalH, Math.min(dPetalS, 100), Math.min(dPetalL, 100)),
                 new HSLColor(dPistilH, Math.min(dPistilS, 100), Math.min(dPistilL, 100))
         );
     }
 
-    public ColorAdjust getRandomColorAdjust() {
+    private ColorAdjust getRandomColorAdjust() {
         ColorAdjust colorAdjust = new ColorAdjust();
         if (chance(0.12f)) {
             colorAdjust.setSaturation(-Math.random());
