@@ -2,8 +2,6 @@ package top.bagadbilla.model.generation.svg;
 
 import org.w3c.dom.*;
 
-import java.io.StringWriter;
-
 public class ForestSVG extends BaseSVG {
 	private static final String[][] PALETTES = {
 			{ "#2F0668", "#41009a", "#6f05ff", "#7e1dff", "#a25eff", "#C49AFC", "#CEA9FF", "#D4B7FC", "#D9BFFC",
@@ -51,8 +49,8 @@ public class ForestSVG extends BaseSVG {
 
 	private final String[] palette;
 
-	public ForestSVG(StringWriter sw, int width, int height) {
-		super(sw, width, height);
+	public ForestSVG(int width, int height) {
+		super(width, height);
 		this.palette = PALETTES[(int) Math.floor(Math.random() * PALETTES.length)];
 		Element style = document.createElement("style");
 		Text elementClass = document.createTextNode(".tr-origin-bottom{transform-origin: 0% 100%;} ");
@@ -192,7 +190,7 @@ public class ForestSVG extends BaseSVG {
 	}
 
 	@Override
-	public void generate() {
+	public ForestSVG generateSVG() {
 		Element root = document.getDocumentElement();
 		root.appendChild(createRect("0", "0", "100%", "100%", palette[5]));
 		root.appendChild(createClipPath());
@@ -214,6 +212,6 @@ public class ForestSVG extends BaseSVG {
 
 		root.appendChild(createDefs());
 
-		writeSVG();
+		return this;
 	}
 }

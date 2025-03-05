@@ -8,9 +8,11 @@ import java.awt.image.BufferedImage;
 public abstract class BaseGraphics extends BaseGeneration {
 
     protected final Graphics2D g;
+    protected final BufferedImage image;
 
-    public BaseGraphics(BufferedImage image, int width, int height) {
+    public BaseGraphics(int width, int height) {
         super(width, height);
+        this.image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         this.g = image.createGraphics();
     }
 
@@ -19,7 +21,9 @@ public abstract class BaseGraphics extends BaseGeneration {
         g.fillRect(0, 0, width, height);
     }
 
-    public void smoothen() {
+    public abstract BaseGraphics generateImage();
+
+    public BaseGraphics smoothen() {
         g.setRenderingHint(RenderingHints.KEY_ALPHA_INTERPOLATION, RenderingHints.VALUE_ALPHA_INTERPOLATION_QUALITY);
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g.setRenderingHint(RenderingHints.KEY_COLOR_RENDERING, RenderingHints.VALUE_COLOR_RENDER_QUALITY);
@@ -28,5 +32,11 @@ public abstract class BaseGraphics extends BaseGeneration {
         g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
         g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
         g.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);
+
+        return this;
+    }
+
+    public BufferedImage getImage() {
+        return image;
     }
 }

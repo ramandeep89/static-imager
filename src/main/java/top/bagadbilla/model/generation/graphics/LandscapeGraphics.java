@@ -4,7 +4,6 @@ import top.bagadbilla.model.generation.HSLColor;
 
 import java.awt.*;
 import java.awt.geom.GeneralPath;
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,8 +20,8 @@ public class LandscapeGraphics extends BaseGraphics {
             new Color(0x081d38),
     };
 
-    public LandscapeGraphics(BufferedImage image, int width, int height) {
-        super(image, width, height);
+    public LandscapeGraphics(int width, int height) {
+        super(width, height);
     }
 
     public void newColorScheme() {
@@ -90,12 +89,14 @@ public class LandscapeGraphics extends BaseGraphics {
     }
 
     @Override
-    public void generate() {
+    public LandscapeGraphics generateImage() {
         fill(colors[0]);
         int steepnessOffset = 0;
         drawPoints(generateBatchPoints(10 + steepnessOffset), colors[1], -200);
         drawPoints(generateBatchPoints(7 + steepnessOffset), colors[2], 0);
         drawPoints(generateBatchPoints(5 + steepnessOffset), colors[3], 100);
         drawPoints(generateBatchPoints(6 + steepnessOffset), colors[4], 200);
+
+        return this;
     }
 }

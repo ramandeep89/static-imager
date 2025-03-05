@@ -8,6 +8,4 @@ public abstract class BaseGeneration {
         this.width = width;
         this.height = height;
     }
-
-    public abstract void generate();
 }

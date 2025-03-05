@@ -5,15 +5,14 @@ import top.bagadbilla.model.generation.HSLColor;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
-import java.awt.image.BufferedImage;
 
 public class RainbowRectanglesGraphics extends BaseGraphics {
 
-    public RainbowRectanglesGraphics(BufferedImage image, int width, int height) {
-        super(image, width, height);
+    public RainbowRectanglesGraphics(int width, int height) {
+        super(width, height);
     }
 
-    public void generate() {
+    public RainbowRectanglesGraphics generateImage() {
         fill(Color.WHITE);
         double size = Math.random() * 60 + 10;
         double baseHueOffset = Math.random() * 360;
@@ -23,6 +22,8 @@ public class RainbowRectanglesGraphics extends BaseGraphics {
                 drawRectangle(size, x, y, baseHueOffset, hueMode);
             }
         }
+
+        return this;
     }
 
     private void drawRectangle(double size, double x, double y, double baseHueOffset, int hueMode) {
