@@ -387,6 +387,31 @@ public class HSLColor {
         return hsl[1];
     }
 
+    public String getHSLString() {
+        return "hsl(" +
+                hsl[0] + "," +
+                hsl[1] + "," +
+                hsl[2] +
+                ")";
+    }
+    public String getHSLAString() {
+        return "hsl(" +
+                hsl[0] + "," +
+                hsl[1] + "," +
+                hsl[2] + "," +
+                alpha +
+                ")";
+    }
+
+    public javafx.scene.paint.Color getFxColor() {
+        int r = rgb.getRed();
+        int g = rgb.getGreen();
+        int b = rgb.getBlue();
+        int a = rgb.getAlpha();
+        double opacity = a / 255.0;
+        return javafx.scene.paint.Color.rgb(r, g, b, opacity);
+    }
+
     public String toString() {
         String toString =
                 "HSLColor[h=" + hsl[0] +

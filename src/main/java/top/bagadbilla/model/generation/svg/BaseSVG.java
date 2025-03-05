@@ -18,7 +18,7 @@ public abstract class BaseSVG extends BaseGeneration {
     protected final Document document;
     protected final int width, height;
 
-    public BaseSVG(int width, int height) {
+    protected BaseSVG(int width, int height) {
         super(width, height);
         DOMImplementation impl = SVGDOMImplementation.getDOMImplementation();
         this.document = impl.createDocument(SVGDOMImplementation.SVG_NAMESPACE_URI, "svg", null);
