@@ -9,5 +9,8 @@ module StaticImager {
     requires com.google.gson;
     requires java.desktop;
 
+    opens top.bagadbilla;
+
     exports top.bagadbilla;
+
 }
