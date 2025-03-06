@@ -6,7 +6,7 @@ ADD . $HOME
 RUN --mount=type=cache,target=/root/.m2 mvn -f $HOME/pom.xml clean package -Dglass.platform=Monocle -Dmonocle.platform=Headless -Dprism.order=sw
 
 FROM eclipse-temurin:21-jre-alpine AS package
-RUN apk add xvfb
+RUN apk add xvfb gtk+3.0
 ENV DISPLAY :99
 ARG JAR_FILE=/usr/app/target/static-imager-jar-with-dependencies.jar
 COPY --from=build $JAR_FILE /app/app.jar
