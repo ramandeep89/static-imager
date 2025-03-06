@@ -18,9 +18,15 @@ public class App implements Runnable {
 
     @Override
     public void run() {
-        Platform.startup(() -> {
-        });
         Javalin.create()
+                .events(eventConfig -> {
+                    eventConfig.serverStarting(() -> {
+                        Platform.startup(() -> {
+                        });
+                        Platform.setImplicitExit(false);
+                    });
+                    eventConfig.serverStopping(Platform::exit);
+                })
                 .get("/nasa", ctx -> ctx.redirect(
                         NasaApodHandler.getResponse(nasaApodApiKey)
                 ))
@@ -48,7 +54,7 @@ public class App implements Runnable {
                     int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1920);
                     int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
                     ctx.contentType("image/png");
-                    ctx.result(new FlowerGeneratorHandler(width, height).getResponse());
+                    ctx.result(FlowerGeneratorHandler.getResponse(width, height));
                 })
                 .get("/forest", ctx -> {
                     int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1280);
