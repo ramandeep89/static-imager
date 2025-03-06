@@ -10,7 +10,7 @@ public abstract class BaseGraphics extends BaseGeneration {
     protected final Graphics2D g;
     protected final BufferedImage image;
 
-    public BaseGraphics(int width, int height) {
+    protected BaseGraphics(int width, int height) {
         super(width, height);
         this.image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         this.g = image.createGraphics();
