@@ -7,6 +7,7 @@ module StaticImager {
     requires org.yaml.snakeyaml;
     requires com.google.gson;
     requires javafx.swing;
+    requires javafx.graphics;
 
     opens top.bagadbilla;
 
