@@ -3,7 +3,7 @@ ENV HOME=/usr/app
 RUN mkdir -p $HOME
 WORKDIR $HOME
 ADD . $HOME
-RUN --mount=type=cache,target=/root/.m2 mvn -f $HOME/pom.xml clean package -Dglass.platform=Monocle -Dmonocle.platform=Headless -Dprism.order=sw
+RUN --mount=type=cache,target=/root/.m2 mvn -f $HOME/pom.xml clean package
 
 FROM eclipse-temurin:21-jre-alpine AS package
 RUN apk add xvfb gtk+3.0 libc6-compat libcanberra-gtk3
