@@ -1,7 +1,8 @@
 package top.bagadbilla.model.generation.fx;
 
 import javafx.scene.effect.ColorAdjust;
-import top.bagadbilla.model.generation.HSLColor;
+import javafx.scene.paint.Color;
+import top.bagadbilla.util.ColorHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ public class FlowersFX extends BaseFX {
 
     private final List<Point> positions = new ArrayList<>();
     private final Options options;
-    private HSLColor pistilC, petalC, pistilC2, petalC2;
+    private Color pistilC, petalC, pistilC2, petalC2;
 
     public FlowersFX(int width, int height) {
         super(width, height);
@@ -28,11 +29,11 @@ public class FlowersFX extends BaseFX {
     public FlowersFX draw() {
         ctx.clearRect(0, 0, width, height);
         ctx.applyEffect(getRandomColorAdjust());
-        HSLColor bg;
+        Color bg;
         if (options.mode.equals("daisies")) bg = getRandomColor(50, 100, 0, 50);
         else bg = getRandomColor(50, 100, 0, 100);
         ctx.save();
-        ctx.setFill(bg.getFxColor());
+        ctx.setFill(bg);
         ctx.fillRect(0, 0, width, height);
         ctx.restore();
 
@@ -90,7 +91,7 @@ public class FlowersFX extends BaseFX {
         ctx.rotate(Math.toDegrees(f.rad));
         ctx.translate(-f.x, -f.y);
 
-        ctx.setFill(chance() ? petalC2.getFxColor() : petalC.getFxColor());
+        ctx.setFill(chance() ? petalC2 : petalC);
         ctx.setStroke(ctx.getFill());
 
         //petals
@@ -135,18 +136,16 @@ public class FlowersFX extends BaseFX {
         }
         //pistil
         for (int j = 0; j < 3; j++) {
-//            ctx.fillOval(f.x + getRandomFloat(-2, 2), f.y + getRandomFloat(-2, 2),
-//                    f.r / f.centerDivisor, f.r / f.centerDivisor);
             ctx.arc(f.x + getRandomFloat(-2, 2), f.y + getRandomFloat(-2, 2),
                     f.r / f.centerDivisor, f.r / f.centerDivisor,
                     0, 360);
         }
 
-        ctx.setStroke(petalC.getFxColor());
+        ctx.setStroke(petalC);
         ctx.setFill(
                 !options.mode.equals("crosshatch") && !options.mode.equals("daisies") ?
-                        chance() ? pistilC2.getFxColor() : pistilC.getFxColor() :
-                        pistilC.getFxColor()
+                        chance() ? pistilC2 : pistilC :
+                        pistilC
         );
         ctx.setGlobalAlpha(1);
         ctx.fill();
@@ -205,25 +204,28 @@ public class FlowersFX extends BaseFX {
         return FlowersFX.MODES[(int) Math.floor(Math.random() * FlowersFX.MODES.length)];
     }
 
-    private HSLColor getRandomColor(float minSat, float maxSat, float minBright, float maxBright) {
+    private Color getRandomColor(float minSat, float maxSat, float minBright, float maxBright) {
         float h = getRandomFloat(0, 360);
         float s = getRandomFloat(minSat, maxSat);
         float l = getRandomFloat(minBright, maxBright);
-        return new HSLColor(h, s, l);
+        return ColorHelper.HSLToFXColor(h, s, l);
     }
 
     private ThemeColors getThemeColors(FlowerColor opt) {
-        HSLColor dPetal = getRandomColor(0, 100, 0, 100);
-        HSLColor dPistil = getRandomColor(0, 100, 0, 100);
+        Color dPetal = getRandomColor(0, 100, 0, 100);
+        Color dPistil = getRandomColor(0, 100, 0, 100);
 
         if (opt == null) return new ThemeColors(dPetal, dPistil);
 
-        float dPetalH = dPetal.getHue();
-        float dPistilH = dPistil.getHue();
-        float dPetalS = dPetal.getSaturation();
-        float dPistilS = dPistil.getSaturation();
-        float dPetalL = dPetal.getLuminance();
-        float dPistilL = dPistil.getLuminance();
+        double[] dPetalHSL = ColorHelper.FXColorToHSL(dPetal);
+        double[] dPistilHSL = ColorHelper.FXColorToHSL(dPistil);
+
+        float dPetalH = (float) dPetalHSL[0];
+        float dPistilH = (float) dPistilHSL[0];
+        float dPetalS = (float) dPetalHSL[1];
+        float dPistilS = (float) dPistilHSL[1];
+        float dPetalL = (float) dPetalHSL[2];
+        float dPistilL = (float) dPistilHSL[2];
 
         if (opt.h != 0) dPetalH = opt.h + getRandomInt(-opt.vary, opt.vary);
         if (opt.s != 0) dPetalS = opt.s + getRandomInt(-opt.vary, opt.vary);
@@ -233,8 +235,8 @@ public class FlowersFX extends BaseFX {
         if (opt.l2 != 0) dPistilL = opt.l2 + getRandomInt(-opt.vary, opt.vary);
 
         return new ThemeColors(
-                new HSLColor(dPetalH, Math.max(Math.min(dPetalS, 100), 0), Math.max(Math.min(dPetalL, 100), 0)),
-                new HSLColor(dPistilH, Math.max(Math.min(dPistilS, 100), 0), Math.max(Math.min(dPistilL, 100), 0))
+                ColorHelper.HSLToFXColor(dPetalH, Math.max(Math.min(dPetalS, 100), 0), Math.max(Math.min(dPetalL, 100), 0)),
+                ColorHelper.HSLToFXColor(dPistilH, Math.max(Math.min(dPistilS, 100), 0), Math.max(Math.min(dPistilL, 100), 0))
         );
     }
 
@@ -258,8 +260,8 @@ public class FlowersFX extends BaseFX {
     }
 
     private record ThemeColors(
-            HSLColor pistil,
-            HSLColor petal
+            Color pistil,
+            Color petal
     ) {
     }
 
