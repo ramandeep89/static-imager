@@ -235,8 +235,8 @@ public class FlowersFX extends BaseFX {
         if (opt.l2 != 0) dPistilL = opt.l2 + getRandomInt(-opt.vary, opt.vary);
 
         return new ThemeColors(
-                ColorHelper.HSLToFXColor(dPetalH, Math.max(Math.min(dPetalS, 100), 0), Math.max(Math.min(dPetalL, 100), 0)),
-                ColorHelper.HSLToFXColor(dPistilH, Math.max(Math.min(dPistilS, 100), 0), Math.max(Math.min(dPistilL, 100), 0))
+                ColorHelper.HSLToFXColor(dPetalH, Math.clamp(dPetalS, 0, 100), Math.clamp(dPetalL, 0, 100)),
+                ColorHelper.HSLToFXColor(dPistilH, Math.clamp(dPistilS, 0, 100), Math.clamp(dPistilL, 0, 100))
         );
     }
 
