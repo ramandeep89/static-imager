@@ -1,6 +1,6 @@
 package top.bagadbilla.model.generation.graphics;
 
-import top.bagadbilla.model.generation.HSLColor;
+import top.bagadbilla.util.ColorHelper;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -48,7 +48,8 @@ public class RainbowRectanglesGraphics extends BaseGraphics {
         }
         double hue = p + randomHueOffset + baseHueOffset;
         double l = Math.random() * 20 + 40;
-        Color color = HSLColor.toRGB((float) hue, 80F, (float) l, 0.7F);
+
+        Color color = ColorHelper.HSLToAWTColor((float) hue, 80F, (float) l, 0.7F);
         g.setColor(color);
         g.fill(shape);
         g.translate(-x, -y);

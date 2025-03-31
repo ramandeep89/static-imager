@@ -1,6 +1,6 @@
 package top.bagadbilla.model.generation.graphics;
 
-import top.bagadbilla.model.generation.HSLColor;
+import top.bagadbilla.util.ColorHelper;
 
 import java.awt.*;
 import java.awt.geom.GeneralPath;
@@ -30,19 +30,19 @@ public class LandscapeGraphics extends BaseGraphics {
 
     public void newColorScheme(float hueSeed) {
         Color[] colors = new Color[5];
-        colors[0] = HSLColor.toRGB(hueSeed, 50, 90);
-        colors[1] = HSLColor.toRGB(hueSeed, 50, 76);
-        colors[2] = HSLColor.toRGB(hueSeed, 50, 50);
-        colors[3] = HSLColor.toRGB(hueSeed, 50, 30);
-        colors[4] = HSLColor.toRGB(hueSeed, 50, 15);
+        colors[0] = ColorHelper.HSLToAWTColor(hueSeed, 50, 90);
+        colors[1] = ColorHelper.HSLToAWTColor(hueSeed, 50, 76);
+        colors[2] = ColorHelper.HSLToAWTColor(hueSeed, 50, 50);
+        colors[3] = ColorHelper.HSLToAWTColor(hueSeed, 50, 30);
+        colors[4] = ColorHelper.HSLToAWTColor(hueSeed, 50, 15);
         this.colors = colors;
     }
 
-    private void drawPoints(List<Double> points, Color color, int offset){
+    private void drawPoints(List<Double> points, Color color, int offset) {
         g.setColor(color);
         GeneralPath path = new GeneralPath();
         path.moveTo(0, (double) height / 2 + points.getFirst() + offset);
-        for(int i = 0; i < points.size(); i++){
+        for (int i = 0; i < points.size(); i++) {
             double x = i * ((double) width / (points.size() - 1));
             double y = (double) height / 2 + points.get(i) + offset;
             path.lineTo(x, y);
@@ -82,7 +82,7 @@ public class LandscapeGraphics extends BaseGraphics {
 
         //iterations of the algorithm, warning: the number of points increases exponentially with the iteration count
         int iterations = 10;
-        for(var i = 0; i < iterations; i++){
+        for (var i = 0; i < iterations; i++) {
             points = generatePoints(points, steepness);
         }
         return points;
