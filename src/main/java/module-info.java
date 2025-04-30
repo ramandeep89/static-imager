@@ -6,6 +6,7 @@ module StaticImager {
     requires javafx.controls;
     requires org.yaml.snakeyaml;
     requires com.google.gson;
+    requires com.google.common;
     requires javafx.swing;
     requires javafx.graphics;
     requires dev.mccue.color;

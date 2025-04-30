@@ -1,11 +1,13 @@
 package top.bagadbilla.model.generation.svg;
 
+import com.google.common.collect.ImmutableMap;
 import dev.mccue.color.Color;
 import org.w3c.dom.Element;
 
 import java.nio.ByteBuffer;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -18,7 +20,7 @@ public class GeoPatternsSVG extends BaseSVG {
     private static final double STROKE_OPACITY = 0.02;
     private static final double OPACITY_MIN = 0.02;
     private static final double OPACITY_MAX = 0.15;
-    private static final Map<String, String> DEFAULTS = Map.of("baseColor", "#933c3c");
+    private static final Map<String, String> DEFAULTS = ImmutableMap.of("baseColor", "#933c3c");
     private final String hash;
     private final Map<String, String> opts;
     private final Element pattern;
@@ -115,22 +117,22 @@ public class GeoPatternsSVG extends BaseSVG {
                 opacity = fillOpacity(val);
                 fill = fillColor(val);
                 styles = Map.of("fill", fill, "fill-opacity", opacity, "stroke", STROKE_COLOR, "stroke-opacity", STROKE_OPACITY);
-                this.polyline(hex, styles).transform(Map.of("translate", List.of(x * sideLength * 1.5 - hexWidth / 2, dy - hexHeight / 2)));
+                this.polyline(hex, styles).transform(ImmutableMap.of("translate", List.of(x * sideLength * 1.5 - hexWidth / 2, dy - hexHeight / 2)));
 
                 // Add an extra one at top-right, for tiling.
                 if (x == 0) {
-                    this.polyline(hex, styles).transform(Map.of("translate", List.of(6 * sideLength * 1.5 - hexWidth / 2, dy - hexHeight / 2)));
+                    this.polyline(hex, styles).transform(ImmutableMap.of("translate", List.of(6 * sideLength * 1.5 - hexWidth / 2, dy - hexHeight / 2)));
                 }
 
                 // Add an extra row at the end that matches the first row, for tiling.
                 if (y == 0) {
                     dy = x % 2 == 0 ? 6 * hexHeight : 6 * hexHeight + hexHeight / 2;
-                    this.polyline(hex, styles).transform(Map.of("translate", List.of(x * sideLength * 1.5 - hexWidth / 2, dy - hexHeight / 2)));
+                    this.polyline(hex, styles).transform(ImmutableMap.of("translate", List.of(x * sideLength * 1.5 - hexWidth / 2, dy - hexHeight / 2)));
                 }
 
                 // Add an extra one at bottom-right, for tiling.
                 if (x == 0 && y == 0) {
-                    this.polyline(hex, styles).transform(Map.of("translate", List.of(6 * sideLength * 1.5 - hexWidth / 2, 5 * hexHeight + hexHeight / 2)));
+                    this.polyline(hex, styles).transform(ImmutableMap.of("translate", List.of(6 * sideLength * 1.5 - hexWidth / 2, 5 * hexHeight + hexHeight / 2)));
                 }
 
                 i++;
@@ -158,8 +160,8 @@ public class GeoPatternsSVG extends BaseSVG {
 
             str = "M0 " + amplitude + " C " + xOffset + " 0, " + (period / 2 - xOffset) + " 0, " + period / 2 + ' ' + amplitude + " S " + (period - xOffset) + " " + amplitude * 2 + ", " + period + " " + amplitude + " S " + (period * 1.5 - xOffset) + " 0, " + period * 1.5 + ", " + amplitude;
 
-            path(str, styles).transform(Map.of("translate", List.of(-period / 4, waveWidth * i - amplitude * 1.5)));
-            path(str, styles).transform(Map.of("translate", List.of(-period / 4, waveWidth * i - amplitude * 1.5 + waveWidth * 36)));
+            path(str, styles).transform(ImmutableMap.of("translate", List.of(-period / 4, waveWidth * i - amplitude * 1.5)));
+            path(str, styles).transform(ImmutableMap.of("translate", List.of(-period / 4, waveWidth * i - amplitude * 1.5 + waveWidth * 36)));
         }
     }
 
@@ -188,11 +190,11 @@ public class GeoPatternsSVG extends BaseSVG {
                 fill = fillColor(val);
                 styles = Map.of("fill", fill, "fill-opacity", opacity, "stroke", STROKE_COLOR, "stroke-opacity", STROKE_OPACITY, "stroke-width", 1);
 
-                group(styles).transform(Map.of("translate", List.of(x * chevronWidth, y * chevronHeight * 0.66 - chevronHeight / 2))).polyline(chevron, Collections.emptyMap()).end();
+                group(styles).transform(ImmutableMap.of("translate", List.of(x * chevronWidth, y * chevronHeight * 0.66 - chevronHeight / 2))).polyline(chevron, Collections.emptyMap()).end();
 
                 // Add an extra row at the end that matches the first row, for tiling.
                 if (y == 0) {
-                    group(styles).transform(Map.of("translate", List.of(x * chevronWidth, 6 * chevronHeight * 0.66 - chevronHeight / 2))).polyline(chevron, Collections.emptyMap()).end();
+                    group(styles).transform(ImmutableMap.of("translate", List.of(x * chevronWidth, 6 * chevronHeight * 0.66 - chevronHeight / 2))).polyline(chevron, Collections.emptyMap()).end();
                 }
 
                 i++;
@@ -225,21 +227,21 @@ public class GeoPatternsSVG extends BaseSVG {
                 dx = y % 2 == 0 ? 0 : 1;
                 styles = Map.of("fill", fill, "fill-opacity", opacity, "stroke", STROKE_COLOR, "stroke-opacity", STROKE_OPACITY);
 
-                group(styles).transform(Map.of("translate", List.of(x * plusSize - x * squareSize + dx * squareSize - squareSize, y * plusSize - y * squareSize - plusSize / 2))).rect(plusShape, Collections.emptyMap()).end();
+                group(styles).transform(ImmutableMap.of("translate", List.of(x * plusSize - x * squareSize + dx * squareSize - squareSize, y * plusSize - y * squareSize - plusSize / 2))).rect(plusShape, Collections.emptyMap()).end();
 
                 // Add an extra column on the right for tiling.
                 if (x == 0) {
-                    group(styles).transform(Map.of("translate", List.of(4 * plusSize - x * squareSize + dx * squareSize - squareSize, y * plusSize - y * squareSize - plusSize / 2))).rect(plusShape, Collections.emptyMap()).end();
+                    group(styles).transform(ImmutableMap.of("translate", List.of(4 * plusSize - x * squareSize + dx * squareSize - squareSize, y * plusSize - y * squareSize - plusSize / 2))).rect(plusShape, Collections.emptyMap()).end();
                 }
 
                 // Add an extra row on the bottom that matches the first row, for tiling
                 if (y == 0) {
-                    group(styles).transform(Map.of("translate", List.of(x * plusSize - x * squareSize + dx * squareSize - squareSize, 4 * plusSize - y * squareSize - plusSize / 2))).rect(plusShape, Collections.emptyMap()).end();
+                    group(styles).transform(ImmutableMap.of("translate", List.of(x * plusSize - x * squareSize + dx * squareSize - squareSize, 4 * plusSize - y * squareSize - plusSize / 2))).rect(plusShape, Collections.emptyMap()).end();
                 }
 
                 // Add an extra one at top-right and bottom-right, for tiling
                 if (x == 0 && y == 0) {
-                    group(styles).transform(Map.of("translate", List.of(4 * plusSize - x * squareSize + dx * squareSize - squareSize, 4 * plusSize - y * squareSize - plusSize / 2))).rect(plusShape, Collections.emptyMap()).end();
+                    group(styles).transform(ImmutableMap.of("translate", List.of(4 * plusSize - x * squareSize + dx * squareSize - squareSize, 4 * plusSize - y * squareSize - plusSize / 2))).rect(plusShape, Collections.emptyMap()).end();
                 }
 
                 i++;
@@ -265,28 +267,28 @@ public class GeoPatternsSVG extends BaseSVG {
                 dy = x % 2 == 0 ? y * xSize - xSize * 0.5 : y * xSize - xSize * 0.5 + xSize / 4;
                 fill = fillColor(val);
                 styles = Map.of("fill", fill, "opacity", opacity);
-                group(styles).transform(Map.of("translate", List.of(x * xSize / 2 - xSize / 2, dy - y * xSize / 2), "rotate", List.of(45, xSize / 2, xSize / 2))).rect(xShape, Collections.emptyMap()).end();
+                group(styles).transform(ImmutableMap.of("translate", List.of(x * xSize / 2 - xSize / 2, dy - y * xSize / 2), "rotate", List.of(45, xSize / 2, xSize / 2))).rect(xShape, Collections.emptyMap()).end();
 
 
                 // Add an extra column on the right for tiling.
                 if (x == 0) {
-                    group(styles).transform(Map.of("translate", List.of(6 * xSize / 2 - xSize / 2, dy - y * xSize / 2), "rotate", List.of(45, xSize / 2, xSize / 2))).rect(xShape, Collections.emptyMap()).end();
+                    group(styles).transform(ImmutableMap.of("translate", List.of(6 * xSize / 2 - xSize / 2, dy - y * xSize / 2), "rotate", List.of(45, xSize / 2, xSize / 2))).rect(xShape, Collections.emptyMap()).end();
                 }
 
                 // // Add an extra row on the bottom that matches the first row, for tiling.
                 if (y == 0) {
                     dy = x % 2 == 0 ? 6 * xSize - xSize / 2 : 6 * xSize - xSize / 2 + xSize / 4;
-                    group(styles).transform(Map.of("translate", List.of(x * xSize / 2 - xSize / 2, dy - 6 * xSize / 2), "rotate", List.of(45, xSize / 2, xSize / 2))).rect(xShape, Collections.emptyMap()).end();
+                    group(styles).transform(ImmutableMap.of("translate", List.of(x * xSize / 2 - xSize / 2, dy - 6 * xSize / 2), "rotate", List.of(45, xSize / 2, xSize / 2))).rect(xShape, Collections.emptyMap()).end();
                 }
 
                 // These can hang off the bottom, so put a row at the top for tiling.
                 if (y == 5) {
-                    group(styles).transform(Map.of("translate", List.of(x * xSize / 2 - xSize / 2, dy - 11 * xSize / 2), "rotate", List.of(45, xSize / 2, xSize / 2))).rect(xShape, Collections.emptyMap()).end();
+                    group(styles).transform(ImmutableMap.of("translate", List.of(x * xSize / 2 - xSize / 2, dy - 11 * xSize / 2), "rotate", List.of(45, xSize / 2, xSize / 2))).rect(xShape, Collections.emptyMap()).end();
                 }
 
                 // Add an extra one at top-right and bottom-right, for tiling
                 if (x == 0 && y == 0) {
-                    group(styles).transform(Map.of("translate", List.of(6 * xSize / 2 - xSize / 2, dy - 6 * xSize / 2), "rotate", List.of(45, xSize / 2, xSize / 2))).rect(xShape, Collections.emptyMap()).end();
+                    group(styles).transform(ImmutableMap.of("translate", List.of(6 * xSize / 2 - xSize / 2, dy - 6 * xSize / 2), "rotate", List.of(45, xSize / 2, xSize / 2))).rect(xShape, Collections.emptyMap()).end();
                 }
                 i++;
             }
@@ -356,7 +358,7 @@ public class GeoPatternsSVG extends BaseSVG {
                 fill = fillColor(val);
                 styles = Map.of("fill", fill, "fill-opacity", opacity, "stroke", STROKE_COLOR, "stroke-opacity", STROKE_OPACITY);
 
-                polyline(tile, styles).transform(Map.of("translate", List.of(x * squareSize, y * squareSize)));
+                polyline(tile, styles).transform(ImmutableMap.of("translate", List.of(x * squareSize, y * squareSize)));
 
                 i++;
             }
@@ -487,11 +489,11 @@ public class GeoPatternsSVG extends BaseSVG {
                     rotation = x % 2 != 0 ? 180 : 0;
                 }
 
-                polyline(triangle, styles).transform(Map.of("translate", List.of(x * sideLength * 0.5 - sideLength / 2, triangleHeight * y), "rotate", List.of(rotation, sideLength / 2, triangleHeight / 2)));
+                polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(x * sideLength * 0.5 - sideLength / 2, triangleHeight * y), "rotate", List.of(rotation, sideLength / 2, triangleHeight / 2)));
 
                 // Add an extra one at top-right, for tiling.
                 if (x == 0) {
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(6 * sideLength * 0.5 - sideLength / 2, triangleHeight * y), "rotate", List.of(rotation, sideLength / 2, triangleHeight / 2)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(6 * sideLength * 0.5 - sideLength / 2, triangleHeight * y), "rotate", List.of(rotation, sideLength / 2, triangleHeight / 2)));
                 }
                 i++;
             }
@@ -524,21 +526,21 @@ public class GeoPatternsSVG extends BaseSVG {
 
                 dx = y % 2 == 0 ? 0 : diamondWidth / 2;
 
-                polyline(diamond, styles).transform(Map.of("translate", List.of(x * diamondWidth - diamondWidth / 2 + dx, diamondHeight / 2 * y - diamondHeight / 2)));
+                polyline(diamond, styles).transform(ImmutableMap.of("translate", List.of(x * diamondWidth - diamondWidth / 2 + dx, diamondHeight / 2 * y - diamondHeight / 2)));
 
                 // Add an extra one at top-right, for tiling.
                 if (x == 0) {
-                    polyline(diamond, styles).transform(Map.of("translate", List.of(6 * diamondWidth - diamondWidth / 2 + dx, diamondHeight / 2 * y - diamondHeight / 2)));
+                    polyline(diamond, styles).transform(ImmutableMap.of("translate", List.of(6 * diamondWidth - diamondWidth / 2 + dx, diamondHeight / 2 * y - diamondHeight / 2)));
                 }
 
                 // Add an extra row at the end that matches the first row, for tiling.
                 if (y == 0) {
-                    polyline(diamond, styles).transform(Map.of("translate", List.of(x * diamondWidth - diamondWidth / 2 + dx, diamondHeight / 2 * 6 - diamondHeight / 2)));
+                    polyline(diamond, styles).transform(ImmutableMap.of("translate", List.of(x * diamondWidth - diamondWidth / 2 + dx, diamondHeight / 2 * 6 - diamondHeight / 2)));
                 }
 
                 // Add an extra one at bottom-right, for tiling.
                 if (x == 0 && y == 0) {
-                    polyline(diamond, styles).transform(Map.of("translate", List.of(6 * diamondWidth - diamondWidth / 2 + dx, diamondHeight / 2 * 6 - diamondHeight / 2)));
+                    polyline(diamond, styles).transform(ImmutableMap.of("translate", List.of(6 * diamondWidth - diamondWidth / 2 + dx, diamondHeight / 2 * 6 - diamondHeight / 2)));
                 }
                 i++;
             }
@@ -587,13 +589,13 @@ public class GeoPatternsSVG extends BaseSVG {
         double opacity = fillOpacity(vals[0]);
         String fill = fillColor(vals[0]);
         Map<String, Object> styles = Map.of("fill", fill, "fill-opacity", opacity, "stroke", STROKE_COLOR, "stroke-opacity", STROKE_OPACITY);
-        polyline(triangle, styles).transform(Map.of("translate", List.of(x + triangleSize, y), "scale", List.of(-1, 1)));
-        polyline(triangle, styles).transform(Map.of("translate", List.of(x + triangleSize, y + triangleSize * 2), "scale", List.of(1, -1)));
+        polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(x + triangleSize, y), "scale", List.of(-1, 1)));
+        polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(x + triangleSize, y + triangleSize * 2), "scale", List.of(1, -1)));
         opacity = fillOpacity(vals[1]);
         fill = fillColor(vals[1]);
         styles = Map.of("fill", fill, "fill-opacity", opacity, "stroke", STROKE_COLOR, "stroke-opacity", STROKE_OPACITY);
-        polyline(triangle, styles).transform(Map.of("translate", List.of(x + triangleSize, y + triangleSize * 2), "scale", List.of(-1, -1)));
-        polyline(triangle, styles).transform(Map.of("translate", List.of(x + triangleSize, y), "scale", List.of(1, 1)));
+        polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(x + triangleSize, y + triangleSize * 2), "scale", List.of(-1, -1)));
+        polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(x + triangleSize, y), "scale", List.of(1, 1)));
     }
 
     private void drawOuterMosaicTile(double x, double y, double triangleSize, double val) {
@@ -601,10 +603,10 @@ public class GeoPatternsSVG extends BaseSVG {
         String fill = fillColor(val);
         String triangle = buildRightTriangleShape(triangleSize);
         Map<String, Object> styles = Map.of("fill", fill, "fill-opacity", opacity, "stroke", STROKE_COLOR, "stroke-opacity", STROKE_OPACITY);
-        polyline(triangle, styles).transform(Map.of("translate", List.of(x, y + triangleSize), "scale", List.of(1, -1)));
-        polyline(triangle, styles).transform(Map.of("translate", List.of(x + triangleSize * 2, y + triangleSize), "scale", List.of(-1, -1)));
-        polyline(triangle, styles).transform(Map.of("translate", List.of(x, y + triangleSize), "scale", List.of(1, 1)));
-        polyline(triangle, styles).transform(Map.of("translate", List.of(x + triangleSize * 2, y + triangleSize), "scale", List.of(-1, 1)));
+        polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(x, y + triangleSize), "scale", List.of(1, -1)));
+        polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(x + triangleSize * 2, y + triangleSize), "scale", List.of(-1, -1)));
+        polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(x, y + triangleSize), "scale", List.of(1, 1)));
+        polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(x + triangleSize * 2, y + triangleSize), "scale", List.of(-1, 1)));
     }
 
     private void geoMosaicSquares() {
@@ -726,54 +728,54 @@ public class GeoPatternsSVG extends BaseSVG {
                     rect(hexWidth / 2 + triangleHeight, hexHeight * 1.5 + sideLength, sideLength, sideLength, styles);
                     break;
                 case 4: // Left top / bottom triangle x
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(sideLength / 2, -sideLength / 2), "rotate", List.of(0, sideLength / 2, triangleHeight / 2)));
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(sideLength / 2, tileHeight - -sideLength / 2), "rotate", List.of(0, sideLength / 2, triangleHeight / 2), "scale", List.of(1, -1)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(sideLength / 2, -sideLength / 2), "rotate", List.of(0, sideLength / 2, triangleHeight / 2)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(sideLength / 2, tileHeight - -sideLength / 2), "rotate", List.of(0, sideLength / 2, triangleHeight / 2), "scale", List.of(1, -1)));
                     break;
                 case 5: // Right top / bottom triangle x
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(tileWidth - sideLength / 2, -sideLength / 2), "rotate", List.of(0, sideLength / 2, triangleHeight / 2), "scale", List.of(-1, 1)));
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(tileWidth - sideLength / 2, tileHeight + sideLength / 2), "rotate", List.of(0, sideLength / 2, triangleHeight / 2), "scale", List.of(-1, -1)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(tileWidth - sideLength / 2, -sideLength / 2), "rotate", List.of(0, sideLength / 2, triangleHeight / 2), "scale", List.of(-1, 1)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(tileWidth - sideLength / 2, tileHeight + sideLength / 2), "rotate", List.of(0, sideLength / 2, triangleHeight / 2), "scale", List.of(-1, -1)));
                     break;
                 case 6: // Center / top / right triangle x
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(tileWidth / 2 + sideLength / 2, hexHeight / 2)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(tileWidth / 2 + sideLength / 2, hexHeight / 2)));
                     break;
                 case 7: // Center / top / left triangle x
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(tileWidth - tileWidth / 2 - sideLength / 2, hexHeight / 2), "scale", List.of(-1, 1)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(tileWidth - tileWidth / 2 - sideLength / 2, hexHeight / 2), "scale", List.of(-1, 1)));
                     break;
                 case 8: // Center / bottom / right triangle x
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(tileWidth / 2 + sideLength / 2, tileHeight - hexHeight / 2), "scale", List.of(1, -1)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(tileWidth / 2 + sideLength / 2, tileHeight - hexHeight / 2), "scale", List.of(1, -1)));
                     break;
                 case 9: // Center / bottom / left triangle x
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(tileWidth - tileWidth / 2 - sideLength / 2, tileHeight - hexHeight / 2), "scale", List.of(-1, -1)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(tileWidth - tileWidth / 2 - sideLength / 2, tileHeight - hexHeight / 2), "scale", List.of(-1, -1)));
                     break;
                 case 10: // Left / middle triangle x
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(sideLength / 2, tileHeight / 2 - sideLength / 2)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(sideLength / 2, tileHeight / 2 - sideLength / 2)));
                     break;
                 case 11: // Right // middle triangle x
-                    polyline(triangle, styles).transform(Map.of("translate", List.of(tileWidth - sideLength / 2, tileHeight / 2 - sideLength / 2), "scale", List.of(-1, 1)));
+                    polyline(triangle, styles).transform(ImmutableMap.of("translate", List.of(tileWidth - sideLength / 2, tileHeight / 2 - sideLength / 2), "scale", List.of(-1, 1)));
                     break;
                 case 12: // Left / top square x
-                    rect(0, 0, sideLength, sideLength, styles).transform(Map.of("translate", List.of(sideLength / 2, sideLength / 2), "rotate", List.of(-30, 0, 0)));
+                    rect(0, 0, sideLength, sideLength, styles).transform(ImmutableMap.of("translate", List.of(sideLength / 2, sideLength / 2), "rotate", List.of(-30, 0, 0)));
                     break;
                 case 13: // Right / top square x
-                    rect(0, 0, sideLength, sideLength, styles).transform(Map.of("scale", List.of(-1, 1), "translate", List.of(-tileWidth + sideLength / 2, sideLength / 2), "rotate", List.of(-30, 0, 0)));
+                    rect(0, 0, sideLength, sideLength, styles).transform(ImmutableMap.of("scale", List.of(-1, 1), "translate", List.of(-tileWidth + sideLength / 2, sideLength / 2), "rotate", List.of(-30, 0, 0)));
                     break;
                 case 14: // Left / center-top square x
-                    rect(0, 0, sideLength, sideLength, styles).transform(Map.of("translate", List.of(sideLength / 2, tileHeight / 2 - sideLength / 2 - sideLength), "rotate", List.of(30, 0, sideLength)));
+                    rect(0, 0, sideLength, sideLength, styles).transform(ImmutableMap.of("translate", List.of(sideLength / 2, tileHeight / 2 - sideLength / 2 - sideLength), "rotate", List.of(30, 0, sideLength)));
                     break;
                 case 15: // Right / center-top square x
-                    rect(0, 0, sideLength, sideLength, styles).transform(Map.of("scale", List.of(-1, 1), "translate", List.of(-tileWidth + sideLength / 2, tileHeight / 2 - sideLength / 2 - sideLength), "rotate", List.of(30, 0, sideLength)));
+                    rect(0, 0, sideLength, sideLength, styles).transform(ImmutableMap.of("scale", List.of(-1, 1), "translate", List.of(-tileWidth + sideLength / 2, tileHeight / 2 - sideLength / 2 - sideLength), "rotate", List.of(30, 0, sideLength)));
                     break;
                 case 16: // Left / center-top square x
-                    rect(0, 0, sideLength, sideLength, styles).transform(Map.of("scale", List.of(1, -1), "translate", List.of(sideLength / 2, -tileHeight + tileHeight / 2 - sideLength / 2 - sideLength), "rotate", List.of(30, 0, sideLength)));
+                    rect(0, 0, sideLength, sideLength, styles).transform(ImmutableMap.of("scale", List.of(1, -1), "translate", List.of(sideLength / 2, -tileHeight + tileHeight / 2 - sideLength / 2 - sideLength), "rotate", List.of(30, 0, sideLength)));
                     break;
                 case 17: // Right / center-bottom square x
-                    rect(0, 0, sideLength, sideLength, styles).transform(Map.of("scale", List.of(-1, -1), "translate", List.of(-tileWidth + sideLength / 2, -tileHeight + tileHeight / 2 - sideLength / 2 - sideLength), "rotate", List.of(30, 0, sideLength)));
+                    rect(0, 0, sideLength, sideLength, styles).transform(ImmutableMap.of("scale", List.of(-1, -1), "translate", List.of(-tileWidth + sideLength / 2, -tileHeight + tileHeight / 2 - sideLength / 2 - sideLength), "rotate", List.of(30, 0, sideLength)));
                     break;
                 case 18: // Left / bottom square x
-                    rect(0, 0, sideLength, sideLength, styles).transform(Map.of("scale", List.of(1, -1), "translate", List.of(sideLength / 2, -tileHeight + sideLength / 2), "rotate", List.of(-30, 0, 0)));
+                    rect(0, 0, sideLength, sideLength, styles).transform(ImmutableMap.of("scale", List.of(1, -1), "translate", List.of(sideLength / 2, -tileHeight + sideLength / 2), "rotate", List.of(-30, 0, 0)));
                     break;
                 case 19: // Right / bottom square x
-                    rect(0, 0, sideLength, sideLength, styles).transform(Map.of("scale", List.of(-1, -1), "translate", List.of(-tileWidth + sideLength / 2, -tileHeight + sideLength / 2), "rotate", List.of(-30, 0, 0)));
+                    rect(0, 0, sideLength, sideLength, styles).transform(ImmutableMap.of("scale", List.of(-1, -1), "translate", List.of(-tileWidth + sideLength / 2, -tileHeight + sideLength / 2), "rotate", List.of(-30, 0, 0)));
                     break;
             }
         }
