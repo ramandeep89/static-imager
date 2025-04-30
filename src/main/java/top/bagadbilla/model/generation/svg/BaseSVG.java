@@ -132,6 +132,14 @@ public abstract class BaseSVG extends BaseGeneration {
         return this;
     }
 
+    protected final BaseSVG tag(@NotNull String tagName, @NotNull Map<String, Object> args) {
+        Element tag = document.createElement(tagName);
+        this.currentContext().appendChild(tag);
+        this.context.push(tag);
+        this.setAttributes(tag, args);
+        return this;
+    }
+
     public abstract BaseSVG generateSVG();
 
     public String getSVG() {
