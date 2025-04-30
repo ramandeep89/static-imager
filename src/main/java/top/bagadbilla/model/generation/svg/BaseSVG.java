@@ -5,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Text;
 import top.bagadbilla.model.generation.BaseGeneration;
 
 import javax.xml.transform.OutputKeys;
@@ -137,6 +138,12 @@ public abstract class BaseSVG extends BaseGeneration {
         this.currentContext().appendChild(tag);
         this.context.push(tag);
         this.setAttributes(tag, args);
+        return this;
+    }
+
+    protected final BaseSVG text(@NotNull String text) {
+        Text textNode = document.createTextNode(text);
+        this.currentContext().appendChild(textNode);
         return this;
     }
 

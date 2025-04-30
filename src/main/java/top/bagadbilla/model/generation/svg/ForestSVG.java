@@ -1,8 +1,6 @@
 package top.bagadbilla.model.generation.svg;
 
 import com.google.common.collect.ImmutableMap;
-import org.w3c.dom.Element;
-import org.w3c.dom.Text;
 
 import java.util.Collections;
 import java.util.List;
@@ -58,19 +56,20 @@ public class ForestSVG extends BaseSVG {
     public ForestSVG(int width, int height) {
         super(width, height);
         this.palette = PALETTES[(int) Math.floor(Math.random() * PALETTES.length)];
-        Element style = document.createElement("style");
-        Text elementClass = document.createTextNode(".tr-origin-bottom{transform-origin: 0% 100%;} ");
-        style.appendChild(elementClass);
-        document.getDocumentElement().setAttribute("class", "svg-main");
-        document.getDocumentElement().setAttribute("viewBox", String.format("0 0 %d %d", width, height));
-        document.getDocumentElement().setAttribute("width", String.valueOf(width));
-        document.getDocumentElement().setAttribute("height", String.valueOf(height));
-        document.getDocumentElement().setAttribute("fill", "none");
-        document.getDocumentElement().appendChild(style);
     }
 
     private int randomInt(int min, int max) {
         return (int) (Math.random() * (max - min)) + min;
+    }
+
+    private void applyStylesheet() {
+        tag("style", Collections.emptyMap())
+                .text(".tr-origin-bottom{transform-origin: 0% 100%;}")
+                .end();
+        setAttributes(currentContext(), Map.of(
+                "class", "svg-main", "viewBox", String.format("0 0 %d %d", width, height),
+                "width", width, "height", height, "fill", "none"
+        ));
     }
 
     private void createClipPath() {
@@ -83,22 +82,22 @@ public class ForestSVG extends BaseSVG {
         group(Map.of("fill", fill, "class", "tr-origin-bottom"))
                 .transform(ImmutableMap.of("translate", List.of(randomInt(100, width - 100), scale * randomInt(0, height - 240)),
                         "scale", List.of(scale, scale)));
-        path(BIRD_PATHS[randomInt(0, BIRD_PATHS.length)], Collections.emptyMap());
-        end();
+        path(BIRD_PATHS[randomInt(0, BIRD_PATHS.length)], Collections.emptyMap())
+                .end();
     }
 
     private void createRandomAnimal(float scale, String fill) {
         group(Map.of("fill", fill, "class", "tr-origin-bottom"))
                 .transform(ImmutableMap.of("translate", List.of(randomInt(100, width - 100), scale * (height - 640)), "scale", List.of(scale, scale)));
-        path(ANIMAL_PATHS[randomInt(0, ANIMAL_PATHS.length)], Collections.emptyMap());
-        end();
+        path(ANIMAL_PATHS[randomInt(0, ANIMAL_PATHS.length)], Collections.emptyMap())
+                .end();
     }
 
     private void createRandomTree(float x, float y, float scale, String fill) {
         group(Map.of("fill", fill, "class", "tr-origin-bottom"))
                 .transform(ImmutableMap.of("translate", List.of(x, y), "scale", List.of(scale, scale)));
-        path(TREE_PATHS[randomInt(0, TREE_PATHS.length)], Collections.emptyMap());
-        end();
+        path(TREE_PATHS[randomInt(0, TREE_PATHS.length)], Collections.emptyMap())
+                .end();
     }
 
     private void createTreeline(float scale, int count, String fill) {
@@ -140,6 +139,7 @@ public class ForestSVG extends BaseSVG {
 
     @Override
     public ForestSVG generateSVG() {
+        applyStylesheet();
         rect(0, 0, "100%", "100%", Map.of("fill", palette[5]));
         createClipPath();
         createSun();
