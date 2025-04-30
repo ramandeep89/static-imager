@@ -2,7 +2,6 @@ package top.bagadbilla.model.generation.svg;
 
 import com.google.common.collect.ImmutableMap;
 import dev.mccue.color.Color;
-import org.w3c.dom.Element;
 
 import java.nio.ByteBuffer;
 import java.security.MessageDigest;
@@ -20,19 +19,14 @@ public class GeoPatternsSVG extends BaseSVG {
     private static final double STROKE_OPACITY = 0.02;
     private static final double OPACITY_MIN = 0.02;
     private static final double OPACITY_MAX = 0.15;
-    private static final Map<String, String> DEFAULTS = ImmutableMap.of("baseColor", "#933c3c");
+    private static final Map<String, String> DEFAULTS = Map.of("baseColor", "#933c3c");
     private final String hash;
     private final Map<String, String> opts;
-    private final Element pattern;
 
     public GeoPatternsSVG(int width, int height, Map<String, String> opts) {
         super(width, height);
-        Element defs = document.createElement("defs");
-        pattern = document.createElement("pattern");
-        svg.appendChild(defs);
-        defs.appendChild(pattern);
-        setAttributes(pattern, Map.of("id", "pattern", "patternUnits", "userSpaceOnUse"));
-        add(pattern);
+        tag("defs", Collections.emptyMap());
+        tag("pattern", Map.of("id", "pattern", "patternUnits", "userSpaceOnUse"));
         this.opts = new HashMap<>(DEFAULTS);
         if (opts != null) this.opts.putAll(opts);
         StringBuilder builder = new StringBuilder();
@@ -84,11 +78,11 @@ public class GeoPatternsSVG extends BaseSVG {
     }
 
     private void setHeight(double height) {
-        pattern.setAttribute("height", String.valueOf(Math.floor(height)));
+        currentContext().setAttribute("height", String.valueOf(Math.floor(height)));
     }
 
     private void setWidth(double width) {
-        pattern.setAttribute("width", String.valueOf(Math.floor(width)));
+        currentContext().setAttribute("width", String.valueOf(Math.floor(width)));
     }
 
     private String buildHexagonShape(double sideLength) {
@@ -824,7 +818,7 @@ public class GeoPatternsSVG extends BaseSVG {
     public GeoPatternsSVG generateSVG() {
         generateBackground();
         generatePattern();
-        end();
+        clear();
         rect(0, 0, "100%", "100%", Map.of("fill", "url(#pattern)"));
         return this;
     }

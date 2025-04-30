@@ -46,8 +46,8 @@ public abstract class BaseSVG extends BaseGeneration {
         return context.pop();
     }
 
-    protected final void add(Element e) {
-        context.push(e);
+    protected final void clear() {
+        context.clear();
     }
 
     protected final Element currentNode() {
