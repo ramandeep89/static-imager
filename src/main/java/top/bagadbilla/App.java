@@ -6,8 +6,6 @@ import javafx.application.Platform;
 import picocli.CommandLine;
 import top.bagadbilla.handler.*;
 
-import java.util.Date;
-
 @CommandLine.Command(name = "static-imager", version = "static-imager 1.0", mixinStandardHelpOptions = true)
 public class App implements Runnable {
 
@@ -67,9 +65,10 @@ public class App implements Runnable {
                 .get("/geopattern", ctx -> {
                     int width = ctx.queryParamAsClass("width", Integer.class).getOrDefault(1920);
                     int height = ctx.queryParamAsClass("height", Integer.class).getOrDefault(1080);
-                    long seed = ctx.queryParamAsClass("seed", Long.class).getOrDefault(new Date().getTime());
+                    long seed = ctx.queryParamAsClass("seed", Long.class).getOrDefault(System.currentTimeMillis());
+                    String pattern = ctx.queryParam("pattern");
                     ctx.contentType("image/svg+xml");
-                    ctx.result(GeoPatternHandler.getResponse(width, height, seed));
+                    ctx.result(GeoPatternHandler.getResponse(width, height, pattern, seed));
                 })
                 .get("/svgfile", ctx -> {
                     String svg = ctx.queryParam("svg");
